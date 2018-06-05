@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CreateActivity"
+    tools:showIn="@layout/activity_form">
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--The following XML document controls the layout of "Create" button for our application
+    When the user chooses create, they will be taken to this form which they will need to
+    complete (or go back) in order to place the pin-->
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eventName"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:hint="Enter Event Name"
+                android:inputType="text"
+                android:elegantTextHeight="false"
+                android:linksClickable="true" />
+
+    <!-- The following Code handles the spinner for the both event and time -->
+
+            <Spinner
+                android:id="@+id/eventSpinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eventName" />
+
+            <Spinner
+                android:id="@+id/startTimeSpinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eventSpinner" />
+
+            <Spinner
+                android:id="@+id/stopTimeSpinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/startTimeSpinner" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/search"
+            android:hint="Search for Address"
+            android:inputType="text"
+            android:linksClickable="true"
+            android:layout_above="@+id/map"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/searchButton" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:id="@+id/searchButton"
+            android:layout_below="@+id/eventDescription"
+            android:layout_alignParentEnd="true"
+            android:background="#5a4a42"
+            android:textColor="#ffffff" />
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/eventDescription"
+            android:allowUndo="false"
+            android:hint="Enter Event Description"
+            android:inputType="text"
+            android:layout_below="@+id/stopTimeSpinner"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="230dp"
+        android:layout_below="@+id/searchButton" />
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/completeForm"
+        android:layout_below="@+id/map"
+        android:layout_centerHorizontal="true" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset Search"
+            android:id="@+id/Reset"
+            android:layout_below="@+id/search"/>
+
+    </RelativeLayout>
+</ScrollView>

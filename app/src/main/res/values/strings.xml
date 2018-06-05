@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">KickIt</string>
+    <string name="title_activity_map_explore">MapExplore</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_maps">KickIt</string>
+    <string name="title_activity_form">CreateActivity</string>
+    <string name="application_id">comp380.get2gether</string>
+    <string name="event_save">Save Event</string>
+    <!-- LoginForm Strings-->
+    <string name="error_field_required">This field is required</string>
+    <string name="error_invalid_user">This username is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="login">Login</string>
+    <string name="new_user">Create User</string>
+    <string name="user_not_found">User Not Found. Please create an account with the Create User Button.</string>
+    <string name="user_creation_error">Error Creating User</string>
+    <string name="birthday_hint">Enter your Birthday</string>
+    <!-- end Login-->
+
+    <!--Scanner-->
+    <string name="scan">Scan</string>
+
+    <!-- Array for Event Type static Spinner-->
+    <string-array name="eventArray">
+        <item>Select Event Type</item>
+        <item>sports</item>
+        <item>drinks</item>
+        <item>food</item>
+        <item>social</item>
+        <item>gaming</item>
+        <item>relax</item>
+        <item>other</item>
+    </string-array>
+    <!-- End Array for Event Type -->
+
+    <!-- Map Strings -->
+    <string name="error_connect_to_services">Can\'t connect to Google Play services</string>
+    <!--End Map String -->
+</resources>
